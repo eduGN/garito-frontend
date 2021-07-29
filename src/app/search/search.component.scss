@@ -1,0 +1,76 @@
+* {
+
+  align-items: center;
+  justify-items: center;
+
+
+  background-color: #1A1A1A;
+
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+
+}
+
+.main-box {
+  padding: 75px 15% 150px 15%;
+}
+
+.title {
+
+  letter-spacing: -2.8px;
+  font-family: 'Contrail One', cursive;
+  font-weight: 500;
+  font-size: 3em;
+  color: #15C2A3;
+  margin-bottom: 20px;
+
+
+
+}
+
+.provincias{
+  max-width: 25%;
+
+}
+
+.map{
+  max-width: 130%;
+  margin: 15px 0px 0px -200px;
+}
+
+.cartoon{
+  max-width: 100%;
+  margin: 50px 0px 0px -100px;
+}
+
+.results{
+  margin-top: 10%;
+}
+
+.artist-card{
+
+  display: block;
+  height: 200px;
+  margin: 5%;
+  place-items: center;
+  border-radius: 8px;
+  //filter: brightness(65%);
+
+}
+
+
+.card-name{
+
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-left:5%;
+  letter-spacing: -1.8px;
+  font-family: 'Contrail One', cursive;
+  font-weight: 500;
+  font-size: 2.7em;
+  color: white;
+
+
+
+}

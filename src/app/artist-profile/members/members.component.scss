@@ -1,0 +1,67 @@
+@import "../../../styles";
+
+* {
+
+  align-items: center;
+  justify-items: left;
+
+  background-color: $bgColor;
+
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+
+}
+
+
+.members{
+  margin-right: 10%;
+
+  .title{
+    h1{
+      letter-spacing: -2.5px;
+      font-family: 'Contrail One', cursive;
+      font-weight: 500;
+      font-size: 2.5em;
+      color: $g-red;
+    }
+  }
+
+
+  .person{
+    background-color: white;
+
+    margin: 6% 0px;
+
+    img{
+
+      border-radius: 50%;
+      max-width: 220px;
+      height: 220px;
+      margin: 2%;
+    }
+
+    .info{
+      border-radius: 15px;
+
+      .name{
+        margin-left: 0%;
+        font-weight: bold;
+        font-size: 1.8em;
+        padding: 1%;
+      }
+
+      .role{
+        font-size: 1.5em;
+        padding: 1%;
+      }
+    }
+  }
+}
+
+hr {
+  margin-top: 2.5%;
+  margin-bottom: 5%;
+  border-top: 4px solid rgb(255, 255, 255);
+}

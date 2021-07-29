@@ -1,0 +1,206 @@
+@import "../../styles";
+
+* {
+
+  align-items: center;
+  justify-items: center;
+
+
+  font-family: 'Contrail One', cursive;
+  font-weight: 500;
+}
+
+.body{
+  background-color: $bgColor;
+}
+
+.bg_dark{
+  background-color: $bgColor;
+}
+
+
+
+.header{
+  width: 100%;
+  max-height: 450px;
+
+}
+.profile-pic{
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  filter: brightness(60%);
+
+}
+
+.name{
+  position: absolute;
+  margin: -150px 0px 0px 15%;
+  background: none;
+
+  letter-spacing: -6px;
+  font-size: 750%;
+  color: white;
+}
+
+
+
+.navbar {
+
+  display:flex;
+  align-items: center;
+  padding: 1% 0px 1% 14.2%;
+  background-color: $bgColor;
+
+  li, a, button {
+    letter-spacing: -1.1px;
+    font-family: 'Contrail One', cursive;
+    font-weight: 500;
+    font-size: 1.4em;
+    color: $cian;
+    text-decoration: none;
+  }
+
+}
+
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: white;
+}
+
+.nav-links li {
+  justify-items: center;
+  display: inline-block;
+  padding: 0.5% 20px;
+
+}
+
+
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &:hover {color: white}
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: 160px;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0px;
+  background: none;
+  font-size: 1.1em;
+  color: $cian;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+//Profile Body
+
+.body{
+  padding: 75px 12% 150px 12%;
+}
+.body .row{
+  align-content: initial;
+}
+
+
+.dinamic-content{
+  min-width: 65%;
+
+}
+
+.cards{
+  margin: 0 auto;
+  padding-top: 0px;
+  background-color: none;
+  color: white;
+  font-size: 1.6em;
+  letter-spacing: -1.1px;
+
+
+  .card-title{
+    font-size: 1.1em;
+
+  }
+
+  .concerts{
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 300px;
+    padding: 8%;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    background-color: $g-red;
+
+  }
+
+  .social{
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 300px;
+    padding: 8%;
+    border-radius: 8px;
+    background-color: $g-red;
+
+    .links-container{
+      display: flex;
+      margin-left: 30%;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .link-box{
+        display: flex;
+        margin:3%;
+
+        .left-item{
+          margin-right: 10%;
+
+        }
+        .right-item{
+
+        }
+
+        .card-link{
+          color: white;
+        }
+
+      }
+    }
+
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+
+  <nav class="navbar navbar-expand-md sticky-top">
+
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="collapseExample">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapseExample" [ngbCollapse]="navbarCollapsed">
+    <img class="logo" src="../assets/img/neonlogo2.png" alt="El Garito">
+
+    <ul class="nav-links navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#">Portada</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/', username]" [attr.href]="'/'+username" routerLinkActive="active">Mi espacio</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/search" routerLinkActive="active">Panorama</a></li>
+    </ul>
+
+
+
+    <div class="box-input">
+      <input #name type="text" placeholder="Encuentra...">
+      <button type="button" class="btn btn-search"><img class="icon" src="../assets/img/search.png" alt="buscar"></button>
+    </div>
+    <div class="user-icons">
+      <a href="#" routerLink="/login" routerLinkActive="active"><img class="icon2" src="../assets/img/alien.png" alt="Profile">Iniciar Sesión</a>
+      <a href="#" routerLink="/singup" routerLinkActive="active"><img class="icon2" src="../assets/img/mesage.png" alt="Mail">Registro</a>
+    </div>
+  </div>
+
+</nav>

@@ -1,0 +1,51 @@
+<div class="bio">
+  <div class="title">
+    <h1>Biografía &nbsp;&nbsp;&nbsp;<fa-icon *ngIf="canEdit" [icon]="editIcon" (click)="openModalForm(biocontent)"></fa-icon></h1>
+    <hr size=5 color="white">
+  </div>
+  <div class="info">
+    {{info?.bio}}
+  </div>
+  <div class="genre">
+    <div class="genre-title">
+      <h1>Género(s) &nbsp;&nbsp;&nbsp;<fa-icon *ngIf="canEdit" [icon]="editIcon" (click)="showEditGenres()"></fa-icon></h1>
+    </div>
+    <hr size=5 color="white">
+    <div class="row mt-3 genre-select" [ngClass]="{'hidden': genresHidden}">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Géneros</mat-label>
+        <mat-select [(ngModel)]="genresToSubmit" ngDefaultControl multiple>
+          <mat-option *ngFor="let genre of genresList" [value]="genre">{{genre}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  <button [ngClass]="{'hidden': genresHidden}" type="button" class="btn btn-success genre-btn" (click)="sendData()">Guardar</button>
+    <div class="genre-selection my-2">
+      <span>{{genrestoShow}} </span>
+    </div>
+  </div>
+
+  <ng-template #biocontent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Editar Biografía</h4>
+      <button type="button" class="close btn" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <fa-icon  [icon]="closeModalIcon"></fa-icon>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="row my-3">
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Biografía</mat-label>
+            <textarea matInput placeholder="Dile al mundo tu historia" class="textarea-bio" [(ngModel)]="bio">{{bio}}</textarea>
+          </mat-form-field>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="[modal.close('Save click'), sendData()]">Guardar</button>
+    </div>
+
+  </ng-template>
+
+</div>

@@ -1,0 +1,93 @@
+@import "../../styles";
+
+.main-container{
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.form-singin{
+
+  height: 100%;
+  width: 25%;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+  padding-right: 2%;
+
+
+}
+
+.right-col{
+  background-color: #0a0a0a;
+  height: 100vh;
+  width: 70%;
+  background-image: url("../../assets/img/wallpaperlogin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+/* .img-login{
+  object-fit: contain
+} */
+
+h3{
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  color:white;
+}
+
+mat-form-field {
+  width: 100%;
+  font-size: 120%;
+}
+
+/* input color class */
+::ng-deep .mat-form-field {
+  .mat-input-element {
+      color: $cian;
+  }
+  .mat-form-field-label {
+      color: $g-red;
+  }
+  .mat-form-field-underline {
+      background-color: $cian;
+  }
+  .mat-form-field-ripple {
+      background-color: $cian;
+  }
+  .mat-form-field-required-marker {
+      color: $cian;
+  }
+}
+
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+      color: $g-red;
+  }
+  .mat-form-field-ripple {
+      background-color: $cian;
+  }
+  .mat-form-field-required-marker {
+      color: $cian;
+  }
+  .mat-input-element {
+      color: $cian;
+  }
+}
+
+.btn-lg{
+  color:#0a0a0a;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  background-color:$cian;
+}
+

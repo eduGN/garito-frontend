@@ -1,0 +1,57 @@
+@import "../../styles";
+
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #FF181E;
+    color: white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+.titles{
+
+  letter-spacing: -1.8px;
+  font-family: 'Contrail One', cursive;
+  font-weight: 500;
+  font-size: 1.7em;
+  color: white;
+  text-decoration: none;
+}
+
+.info {
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+
+  max-width: 250px;
+  min-width: 150px;
+  padding: 30px 0px 0px 0px;
+  margin-right: -150px;
+}
+
+.social {
+  max-width: 200px;
+  min-width: 150px;
+  padding: 30px 0px 0px 0px;
+  margin-left: -150px;
+  margin-bottom: -150px;
+
+}
+

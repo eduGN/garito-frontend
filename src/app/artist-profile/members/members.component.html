@@ -1,0 +1,94 @@
+<div class="members">
+
+  <div class="row">
+    <div class="title">
+        <h1>Miembros</h1>
+
+    </div>
+    <hr/>
+  </div>
+
+
+  <div class="row" >
+
+    <div class="col-2">
+      <button *ngIf="canEdit" (click)="openModalForm(content)" class="btn btn-success">Añadir Miembros</button>
+    </div>
+
+    <div class="col-12" *ngFor="let member of members">
+      <div class="person">
+        <div class="row">
+
+              <div class="col-12 col-md-4">
+                <img src={{member.picture}} alt="Un Personaje">
+              </div>
+              <div class="info col-12 col-md-8">
+                <div class="name">
+                  {{member.name}}
+                </div>
+                <div class="role">
+                  {{member.role}}
+                </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Añadir nuevo miembro</h4>
+      <button type="button" class="close btn" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <fa-icon  [icon]="closeModalIcon"></fa-icon>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="mForm" (ngSubmit)="onSubmit()">
+        <div class="row my-3">
+
+            <mat-form-field>
+              <mat-label>Nombre</mat-label>
+              <input matInput type="text" formControlName="name" [ngClass]="{'is-invalid': isSent && f.name.errors}">
+            </mat-form-field>
+            <mat-error *ngIf="isSent && f.name.errors">
+               Introduce un nombre <strong>válido</strong>
+            </mat-error>
+
+        </div>
+        <div class="row my-3">
+
+          <mat-form-field>
+            <mat-label>Sube una Foto</mat-label>
+            <input matInput type="text" formControlName="picture" [ngClass]="{'is-invalid': isSent && f.picture.errors}">
+          </mat-form-field>
+          <mat-error *ngIf="isSent && f.picture.errors">
+            Introduce un archivo <strong>válido</strong>
+          </mat-error>
+
+      </div>
+        <div class="row my-3">
+
+          <mat-form-field>
+            <mat-label>Roles en la Banda</mat-label>
+            <input matInput type="text" formControlName="role" [ngClass]="{'is-invalid': isSent && f.role.errors}">
+          </mat-form-field>
+          <mat-error *ngIf="isSent && f.role.errors">
+            Introduce un rol <strong>válida</strong>
+          </mat-error>
+
+      </div>
+        <button type="submit" class="btn btn-primary">Añadir Miembro</button>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+
+    </div>
+
+  </ng-template>
+
+</div>
+
+

@@ -1,0 +1,80 @@
+<div class="contact">
+  <div class="title">
+    <h1>Contacto &nbsp;&nbsp;&nbsp;<fa-icon *ngIf="canEdit" [icon]="editIcon" (click)="openModalForm(content)"></fa-icon>
+    </h1>
+    <hr />
+  </div>
+  <div class="info">
+    {{contact.message}}
+  </div>
+  <div class="data">
+    <h1>e-mail</h1>
+    <p>{{contact.email}}</p>
+  </div>
+  <div class="data">
+    <h1>teléfono</h1>
+    <p>{{contact.phone}}</p>
+  </div>
+  <div class="data">
+    <h1>Dirección</h1>
+    <p>{{contact.address}}</p>
+  </div>
+  <div class="data">
+    <h1>Web</h1>
+    <p>{{contact.web}}</p>
+  </div>
+
+  <ng-template #content let-modal>
+    <div class="modal-header bg_dark">
+      <h4 class="modal-title" id="modal-basic-title">Editar Contacto</h4>
+      <button type="button" class="close btn" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <fa-icon [icon]="closeModalIcon"></fa-icon>
+      </button>
+    </div>
+    <div class="modal-body bg_dark">
+      <div class="row my-3">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Mensaje</mat-label>
+          <textarea matInput placeholder="Información cuando te contacten" class="textarea-bio" [(ngModel)]="contact.message">{{contact.message}}</textarea>
+        </mat-form-field>
+      </div>
+      <div class="row my-3">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" placeholder="email" [(ngModel)]="contact.email" [value]="contact.email"/>
+        </mat-form-field>
+      </div>
+      <div class="row my-3">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Teléfono</mat-label>
+          <input matInput type="text" placeholder="teléfono" [(ngModel)]="contact.phone" [value]="contact.phone"/>
+        </mat-form-field>
+      </div>
+      <div class="row my-3">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Dirección</mat-label>
+          <input matInput type="text" placeholder="dirección" [(ngModel)]="contact.address" [value]="contact.address"/>
+        </mat-form-field>
+      </div>
+
+      <div class="row my-3">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Web</mat-label>
+          <input matInput type="text" placeholder="web" [(ngModel)]="contact.web" [value]="contact.web" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="modal-footer bg_dark">
+      <button type="button" class="btn btn-success" (click)="[modal.close('Save click'), sendData()]">Guardar</button>
+    </div>
+
+  </ng-template>
+
+
+
+</div>

@@ -1,0 +1,108 @@
+@import "../../styles";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+a.active {
+  color: #FF181E;
+}
+
+.navbar {
+
+  display:flex;
+  align-items: center;
+  padding:  1%;
+  background-color: #0D0D0D;
+
+}
+
+li, a, button {
+  letter-spacing: -1.8px;
+  font-family: 'Contrail One', cursive;
+  font-weight: 500;
+  font-size: 1.45em;
+  color: white;
+  text-decoration: none;
+}
+
+
+.logo {
+  width: 17%;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 0px 30px 0px 30px;
+  cursor: pointer;
+  //margin-right auto
+}
+
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  justify-items: center;
+  display: inline-block;
+  padding: 0.5% 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #FF181E;
+}
+
+
+.box-input {
+  display:flex;
+  align-items: center;
+  min-width: 256px;
+  border-radius: 30px;
+  background:white;
+  margin-left: auto;
+  input {
+      border: 0px;
+      padding: 5px 10px 5px 20px;
+      font-size: 20px;
+      border-radius: 20px;
+      outline: none;
+      width: calc(100% - 75px);
+  }
+  .btn-search {
+
+      margin-right: 0px;
+      border-radius: 30px;
+      width: 50px;
+      height: 35px;
+      &:hover {
+          background: rgb(236, 235, 235);
+      }
+      .icon {
+        display:flex;
+        margin-top: -4px;
+        max-width: auto;
+        width: 33px;
+        height: auto;
+      }
+    }
+}
+
+.user-icons {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+
+}
+
+.icon2 {
+  max-height: 50px;
+  margin: 5px;
+
+}
